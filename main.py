@@ -1,10 +1,10 @@
 import telebot
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
 
-# --- ТВОИ ДАННЫЕ ---
-TOKEN = '8664870008:AAF4-MEat37HHJHE3VX2wuBSQUcdrsPWZXI'
-MY_CHAT_ID = '8479103947'
+TOKEN = os.getenv('TOKEN')
+MY_CHAT_ID = os.getenv('MY_CHAT_ID')
 
 bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
